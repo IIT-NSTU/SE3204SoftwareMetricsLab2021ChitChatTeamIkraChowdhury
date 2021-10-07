@@ -1,7 +1,7 @@
 package ui;
 
 import clint.clintsocket;
-//import filedata.chathistory;**********************************************
+import filedata.chathistory;
 //import tictactoy.TictacMainFrame;*****************************************
 //import dictionary.DictionaryMainFrame;************************************
 import static clint.clintsocket.sendingstream;
@@ -57,7 +57,7 @@ public class personalchatroomui extends clintsocket {
     boolean logout;
     public boolean clintnamebuttton_clicked = false, flag, button_createfalg = true, isfile = false;
 
-   // chathistory history_chats = new chathistory();***************************************************************
+    chathistory history_chats = new chathistory();
 
     //frame  and global images
     JFrame frame = new JFrame();
@@ -384,19 +384,19 @@ public class personalchatroomui extends clintsocket {
                                     //checks for history of the frinds chat
                                     boolean exists;
 //***************************************************************************************************************************
-//                                    exists = history_chats.chatfileavailability("Chat of" + clintname+name + ".txt");
-//
-//                                    //if the friends chat list is available gets the chat from the history
-//                                    if (exists == true) {
-//                                        String chats;
-//                                        chats = history_chats.getting_chatHIdtory("Chat of" + clintname+name + ".txt");
-//                                        for (clintthread clint : clint_listofclintthreadclass) {
-//                                            if (clint.number == clintnumber) {
-//                                                clint.msgelist.add(chats);
-//                                            }
-//                                        }
-//
-//                                    }
+                                    exists = history_chats.chatfileavailability("Chat of" + clintname+name + ".txt");
+
+                                    //if the friends chat list is available gets the chat from the history
+                                    if (exists == true) {
+                                        String chats;
+                                        chats = history_chats.getting_chatHIdtory("Chat of" + clintname+name + ".txt");
+                                        for (clintthread clint : clint_listofclintthreadclass) {
+                                            if (clint.number == clintnumber) {
+                                                clint.msgelist.add(chats);
+                                            }
+                                        }
+
+                                    }
 //*******************************************************************************************************************************
 
                                     JButton button = new JButton(clintname);
@@ -541,7 +541,7 @@ public class personalchatroomui extends clintsocket {
                                     }
 
                                     //creates chat history file for the new friend
-                                   // history_chats.createHistoryFile("Chat of" + friend_name+name + ".txt");*************************************************
+                                   history_chats.createHistoryFile("Chat of" + friend_name+name + ".txt");
 
                                     FileOfFriendLsit(friend_name);
                                     if (friendrequestnumber == current_clintnumber) {
@@ -569,7 +569,7 @@ public class personalchatroomui extends clintsocket {
                                     }
                                 }
                                 //creates chat history file for the new friend
-                               // history_chats.createHistoryFile("Chat of" + friend_name+name + ".txt");************************************************************************
+                                history_chats.createHistoryFile("Chat of" + friend_name+name + ".txt");
 
                                 FileOfFriendLsit(friend_name);//this method add new frind name to the friend list file
                                 frame.setVisible(false);
@@ -604,7 +604,7 @@ public class personalchatroomui extends clintsocket {
 
                                 }
                                 //saves msg in history
-                               // history_chats.WriteHistory("Chat of" +personwhosent_name+name + ".txt", "(" + personwhosent_name + ")------->" + actualmsg);*****************************
+                               history_chats.WriteHistory("Chat of" +personwhosent_name+name + ".txt", "(" + personwhosent_name + ")------->" + actualmsg);
                                 for (clintthread clint : clint_listofclintthreadclass) {
                                     if (clint.number == personwhosent_number) {
                                         clint.msgelist.add(personwhosent_name + ": " + actualmsg);
