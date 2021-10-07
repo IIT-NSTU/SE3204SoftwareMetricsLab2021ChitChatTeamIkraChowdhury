@@ -1,11 +1,11 @@
 package ui;
-//import User.userstructure; 
+import User.userstructure; 
 
-//import filedata.accountdata;*****************************************
+import filedata.accountdata;
 //import filedata.objectread; 
 //import  server.serversocket;
 import clint.clintsocket;
-//import filedata.objectread;*********************************************
+import filedata.objectread;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.BasicStroke;
@@ -229,30 +229,30 @@ public class loginwindow extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
 //*****************************************************************************************************************************
-//
-//                accountdata aaccountdata = new accountdata();
-//                boolean exist;
-//
-//                exist = aaccountdata.checkCredentials(usernameField.getText(), String.valueOf(passwordField.getPassword()));
-//
-//                if (exist != false) {
-//                    File filepath = new File(usernameField.getText() + ".txt");
-//                    if(filepath.exists()){
-//                    objectread user = new objectread(filepath.getAbsolutePath());
-//                    personalchatroomui userchatroom = new personalchatroomui(user.username + " " + user.nickname, filepath);
-//                    //Sharefilechatroomui userchatroom=new Sharefilechatroomui( user.dp,user.username+" "+user.nickname,filepath );
-//                    //clintsocket clint=new clintsocket(user.dp,user.username+" "+user.nickname,filepath); 
-//                    setVisible(false);
-//                    //clintsocket clint=new clintsocket(usernameField.getText(),filepath); 
-//                    //serversocket serve=new serversocket(null);
-//                    }else{
-//                        JOptionPane.showMessageDialog(jpanel1, "This account doesnot exits!Please create new account with no space in username"); 
-//                    }
-//                    
-//
-//                } else {
-//                    JOptionPane.showMessageDialog(jpanel1, "Incorrect username or password.");
-//                }
+
+                accountdata aaccountdata = new accountdata();
+                boolean exist;
+
+                exist = aaccountdata.checkCredentials(usernameField.getText(), String.valueOf(passwordField.getPassword()));
+
+                if (exist != false) {
+                    File filepath = new File(usernameField.getText() + ".txt");
+                    if(filepath.exists()){
+                    objectread user = new objectread(filepath.getAbsolutePath());
+                    personalchatroomui userchatroom = new personalchatroomui(user.username + " " + user.nickname, filepath);
+                    //Sharefilechatroomui userchatroom=new Sharefilechatroomui( user.dp,user.username+" "+user.nickname,filepath );
+                    //clintsocket clint=new clintsocket(user.dp,user.username+" "+user.nickname,filepath); 
+                    setVisible(false);
+                    //clintsocket clint=new clintsocket(usernameField.getText(),filepath); 
+                    //serversocket serve=new serversocket(null);
+                    }else{
+                        JOptionPane.showMessageDialog(jpanel1, "This account doesnot exits!Please create new account with no space in username"); 
+                    }
+                    
+
+                } else {
+                    JOptionPane.showMessageDialog(jpanel1, "Incorrect username or password.");
+                }
 //************************************************************************************************************************************************************
             }
         });
