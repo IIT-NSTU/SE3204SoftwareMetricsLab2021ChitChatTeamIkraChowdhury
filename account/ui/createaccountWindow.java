@@ -1,7 +1,7 @@
 package ui;
 //******************************
-//import User.userstructure;
-//import filedata.accountdata;
+import User.userstructure;
+import filedata.accountdata;
 //******************************
 
 import javax.swing.*;
@@ -23,7 +23,7 @@ public class createaccountWindow extends JFrame {
     JPasswordField passwordField;
     JTextField emailfield;
     private JButton submitButton;
-   // private accountdata aaccounts; **************************
+    private accountdata aaccounts; 
     private ObjectFileCreate objectCreate;
     public loginwindow loginPage;
     public boolean a;
@@ -32,7 +32,7 @@ public class createaccountWindow extends JFrame {
     @SuppressWarnings("unused")
 
     public createaccountWindow() {
-      //  aaccounts = new accountdata();****************************
+       aaccounts = new accountdata();
         framekeycreatewindow();
         setVisible(true);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -234,38 +234,38 @@ public class createaccountWindow extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
 //*******************************************************************
-//                email_validation(emailfield.getText());
-//                if (usernameField.getText().equalsIgnoreCase("") || nickField.getText().equalsIgnoreCase("") || passwordField.getText().equalsIgnoreCase("") || emailfield.getText().equalsIgnoreCase("")) {
-//                    JOptionPane.showMessageDialog(jpanel1, "Fill all the information");
-//                } else if (!a) {
-//                    JOptionPane.showMessageDialog(jpanel1, "Invalid Email Address");
-//                    emailfield.setText("");
-//
-//                }else if(usernameField.getText().contains(" ")){
-//                   JOptionPane.showMessageDialog(jpanel1, "You can not give space in user name");
-//                   usernameField.setText("");
-//                }
-//                else {
-//
-//                    boolean available = aaccounts.checkAvaiability(usernameField.getText());
-//
-//                    if (available == false) {
-//                        JOptionPane.showMessageDialog(jpanel1, "This username is not Available");
-//                        usernameField.setText("");
-//
-//                    } else {
-//                        userstructure newUser = aaccounts.createAccount(String.valueOf(passwordField.getPassword()), usernameField.getText(),
-//                                nickField.getText(), emailfield.getText());
-//                        String name = usernameField.getText();
-//                        String filename = name + ".txt";
-//                        objectCreate = new ObjectFileCreate(newUser, filename, name);
-//                        File f = new File("E:\\" + usernameField.getText() + " " + nickField.getText());
-//                        f.mkdir();
-//                        setVisible(false);
-//                        loginPage = new loginwindow();
-//
-//                    }
-//                }
+               email_validation(emailfield.getText());
+                if (usernameField.getText().equalsIgnoreCase("") || nickField.getText().equalsIgnoreCase("") || passwordField.getText().equalsIgnoreCase("") || emailfield.getText().equalsIgnoreCase("")) {
+                    JOptionPane.showMessageDialog(jpanel1, "Fill all the information");
+                } else if (!a) {
+                    JOptionPane.showMessageDialog(jpanel1, "Invalid Email Address");
+                    emailfield.setText("");
+
+               }else if(usernameField.getText().contains(" ")){
+                   JOptionPane.showMessageDialog(jpanel1, "You can not give space in user name");
+                   usernameField.setText("");
+                }
+                else {
+
+                    boolean available = aaccounts.checkAvaiability(usernameField.getText());
+
+                    if (available == false) {
+                        JOptionPane.showMessageDialog(jpanel1, "This username is not Available");
+                       usernameField.setText("");
+
+                    } else {
+                        userstructure newUser = aaccounts.createAccount(String.valueOf(passwordField.getPassword()), usernameField.getText(),
+                                nickField.getText(), emailfield.getText());
+                        String name = usernameField.getText();
+                        String filename = name + ".txt";
+                        objectCreate = new ObjectFileCreate(newUser, filename, name);
+                        File f = new File("E:\\" + usernameField.getText() + " " + nickField.getText());
+                        f.mkdir();
+                        setVisible(false);
+                        loginPage = new loginwindow();
+
+                    }
+                }
 //****************************************************************************************************
             }
         });
