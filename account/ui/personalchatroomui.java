@@ -2,8 +2,8 @@ package ui;
 
 import clint.clintsocket;
 import filedata.chathistory;
-//import tictactoy.TictacMainFrame;*****************************************
-//import dictionary.DictionaryMainFrame;************************************
+import tictactoy.TictacMainFrame;
+import dictionary.DictionaryMainFrame;
 import static clint.clintsocket.sendingstream;
 import clint.clintthread;
 import javax.swing.*;
@@ -706,29 +706,29 @@ public class personalchatroomui extends clintsocket {
         }
         );
 //*********************************************************************************
-//
-//        gamingzonebutton.addActionListener(
-//                new ActionListener() {
-//
-//            @Override
-//            public void actionPerformed(ActionEvent e
-//            ) {
-//                TictacMainFrame titocgame = new TictacMainFrame();
-//
-//            }
-//        }
-//        );
-//
-//        dictionary_Button.addActionListener(
-//                new ActionListener() {
-//
-//            @Override
-//            public void actionPerformed(ActionEvent e
-//            ) {
-//                DictionaryMainFrame dictionary = new DictionaryMainFrame();
-//            }
-//        }
-//        );
+
+        gamingzonebutton.addActionListener(
+                new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e
+            ) {
+                TictacMainFrame titocgame = new TictacMainFrame();
+
+            }
+        }
+        );
+
+        dictionary_Button.addActionListener(
+                new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e
+            ) {
+                DictionaryMainFrame dictionary = new DictionaryMainFrame();
+            }
+        }
+        );
         
 //************************************************************************************8
 
