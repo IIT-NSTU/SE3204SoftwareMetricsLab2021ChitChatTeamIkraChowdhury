@@ -5,6 +5,8 @@
         <data xmlns="http://www.netbeans.org/ns/j2se-project/3">
             <name>Final_chitchat</name>
             <source-roots>
+                <root id="src.dictionary.dir"/>
+                <root id="src.tictactoy.dir"/>
                 <root id="src.account.dir"/>
                 <root id="src.socket.dir"/>
                 <root id="src.dir"/>
