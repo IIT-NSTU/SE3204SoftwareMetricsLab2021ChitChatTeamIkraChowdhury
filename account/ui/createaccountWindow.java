@@ -24,7 +24,7 @@ public class createaccountWindow extends JFrame {
     JTextField emailfield;
     private JButton submitButton;
     private accountdata aaccounts; 
-  //  private ObjectFileCreate objectCreate; **********************************************
+    private ObjectFileCreate objectCreate; 
     public loginwindow loginPage;
     public boolean a;
 
@@ -233,7 +233,7 @@ public class createaccountWindow extends JFrame {
         submitButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-/*******************************************************************
+//*******************************************************************
                email_validation(emailfield.getText());
                 if (usernameField.getText().equalsIgnoreCase("") || nickField.getText().equalsIgnoreCase("") || passwordField.getText().equalsIgnoreCase("") || emailfield.getText().equalsIgnoreCase("")) {
                     JOptionPane.showMessageDialog(jpanel1, "Fill all the information");
@@ -266,7 +266,7 @@ public class createaccountWindow extends JFrame {
 
                     }
                 }
-//****************************************************************************************************/
+//****************************************************************************************************
             }
         });
 
