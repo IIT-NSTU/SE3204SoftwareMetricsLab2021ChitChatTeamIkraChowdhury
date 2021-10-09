@@ -693,7 +693,7 @@ public class personalchatroomui extends clintsocket {
             }
         }
         );
-
+/****************************************************************
         shareditemmenu_button.addActionListener(
                 new ActionListener() {
 
@@ -705,7 +705,7 @@ public class personalchatroomui extends clintsocket {
             }
         }
         );
-//*********************************************************************************
+//*********************************************************************************/
 
         gamingzonebutton.addActionListener(
                 new ActionListener() {
